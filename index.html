@@ -495,7 +495,7 @@ return`<div class="proto-card"><div class="proto-top"><div class="proto-name"><s
 
 // ─── HELPERS ───
 function animateNum(id,target){const el=document.getElementById(id);let cur=0;const step=Math.max(1,Math.floor(target/40));const iv=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur;if(cur>=target)clearInterval(iv)},25)}
-function animateNumEl(el,lo,hi){let cur=0;const step=Math.max(1,Math.floor(lo/30));const iv=setInterval(()=>{cur=Math.min(cur+step,lo);el.textContent='$'+cur.toLocaleString();if(cur>=lo){el.textContent='$'+lo.toLocaleString()+'-$'+hi.toLocaleString();clearInterval(iv)},30)}
+function animateNumEl(el,lo,hi){let cur=0;const step=Math.max(1,Math.floor(lo/30));const iv=setInterval(()=>{cur=Math.min(cur+step,lo);el.textContent='$'+cur.toLocaleString();if(cur>=lo){el.textContent='$'+lo.toLocaleString()+'-$'+hi.toLocaleString();clearInterval(iv)}},30)}
 function formatDate(ts){const d=new Date(ts);return d.toLocaleDateString('en-US',{month:'short',year:'numeric'})}
 
 function toggleTask(i){
